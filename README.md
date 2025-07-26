@@ -1,14 +1,19 @@
-# Welcome to your CDK TypeScript project
+# My First AWS CDK Application
 
-This is a blank project for CDK development with TypeScript.
+This is a simple "Hello World" application deployed on AWS using the AWS Cloud Development Kit (CDK).
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+This project creates a basic AWS Lambda function that returns a simple message.
 
-## Useful commands
+## Architecture
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `npx cdk deploy`  deploy this stack to your default AWS account/region
-* `npx cdk diff`    compare deployed stack with current state
-* `npx cdk synth`   emits the synthesized CloudFormation template
+* **AWS Lambda**: A single Node.js function located in the `/lambdas` directory.
+* **Amazon S3**: The CDK uses an S3 bucket to store assets during deployment.
+
+## Useful CDK Commands
+
+* `npm install` - Install all required dependencies.
+* `cdk bootstrap` - Prepare your AWS environment for the CDK (only needs to be run once).
+* `cdk synth` - Generates the CloudFormation template.
+* `cdk deploy` - Deploys the stack to your default AWS account/region.
+* `cdk diff` - Compares the deployed stack with the current state.
+* `cdk destroy` - Removes the stack and all its resources from AWS.
